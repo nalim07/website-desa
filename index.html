@@ -2,10 +2,10 @@
 <html lang="id">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kampung Longjaha</title>
-    <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OPCK - Kp. Sumur Gading</title>
+    <link rel="stylesheet" href="assets/css/style.css">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,99 +16,124 @@
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <h1 class="logo">Longjaha</h1>
-            <nav>
-                <ul class="nav">
-                    <li><a href="index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#">Profil</a>
-                        <ul class="dropdown-content">
-                            <li><a href="#">RT</a></li>
-                            <li><a href="#">RW</a></li>
-                            <li><a href="#">Tentang Kampung</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#">Informasi Publik</a>
-                        <ul class="dropdown-content">
-                            <li><a href="#">Kependudukan</a></li>
-                            <li><a href="#">Kearifan Lokal</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#">Pusat Media</a></li>
+    <header class="transparent" id="myHeader">
+        <div class="header-container">
+            <div class="logo-area">
+                <div class="site-title">
+                    <h1>OPCK</h1>
+                    <p>Kampung Sumur Gading, Serang.</p>
+                </div>
+            </div>
+            <nav class="main-nav">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="nav-link active">Beranda</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Profil</a></li>
+                    <li class="nav-item"><a href="#layanan" class="nav-link">Layanan</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Berita</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Galeri</a></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Kontak</a></li>
                 </ul>
             </nav>
-        </div>
-        <div class="hero-carousel">
-            <img src="https://cdn.umpan.com.my/2020/06/foto1-13_54_323688.jpg" class="slide active" alt="Slide 1" />
-            <img src="https://images-cdn.ubuy.co.in/6359e9b550477d0b8808dae1-mountain-river-perfect-fishing-sunset.jpg"
-                class="slide" alt="Slide 2" />
-            <img src="https://images-cdn.ubuy.co.in/6359e9b550477d0b8808dae1-mountain-river-perfect-fishing-sunset.jpg"
-                class="slide" alt="Slide 3" />
+            <button class="nav-toggle" aria-label="Toggle Navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
     </header>
 
-    <main>
-        <section class="hero-intro">
-            <h2>Selamat Datang di Kampung Longjaha</h2>
-            <p>Kampung yang dikenal dengan semangat gotong royong, budaya luhur, dan kehidupan masyarakat yang harmonis.
-            </p>
-        </section>
+    <section class="hero">
+        <div class="hero-container">
+            <h2 class="hero-title">Selamat Datang di Website Resmi Kp. Sumur Gading</h2>
+            <p class="hero-subtitle">Informasi terkini seputar kegiatan dan layanan di Kp. Sumur Gading.</p>
+        </div>
+    </section>
 
-        <section class="features">
-            <div class="feature-box">
-                <h3>Budaya Kuat</h3>
-                <p>Melestarikan tradisi dan nilai luhur yang diwariskan turun-temurun.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Gotong Royong</h3>
-                <p>Kegiatan warga selalu melibatkan kerja sama, dari pembangunan hingga acara adat.</p>
-            </div>
-            <div class="feature-box">
-                <h3>Lingkungan Asri</h3>
-                <p>Menjaga kebersihan dan penghijauan lingkungan menjadi budaya sehari-hari.</p>
-            </div>
-        </section>
+    <main class="main-content">
+        <div class="container">
+            <section id="berita" class="content-section">
+                <h2>Berita Terkini</h2>
+                <div class="grid-container">
+                    <article class="card">
+                        <img src="images/berita1-placeholder.jpg" alt="Judul Berita 1">
+                        <h3>Judul Berita Pertama</h3>
+                        <p>Ringkasan singkat berita pertama ada di sini...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </article>
+                    <article class="card">
+                        <img src="images/berita2-placeholder.jpg" alt="Judul Berita 2">
+                        <h3>Judul Berita Kedua</h3>
+                        <p>Ringkasan singkat berita kedua ada di sini...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </article>
+                    <article class="card">
+                        <img src="images/berita3-placeholder.jpg" alt="Judul Berita 3">
+                        <h3>Judul Berita Ketiga</h3>
+                        <p>Ringkasan singkat berita ketiga ada di sini...</p>
+                        <a href="#" class="read-more">Baca Selengkapnya</a>
+                    </article>
+                </div>
+            </section>
 
-        <section class="statistik">
-            <div>
-                <h3>150+</h3>
-                <p>Keluarga</p>
-            </div>
-            <div>
-                <h3>10+</h3>
-                <p>Kegiatan Rutin</p>
-            </div>
-            <div>
-                <h3>5</h3>
-                <p>RT Aktif</p>
-            </div>
-        </section>
+            <section id="pengumuman" class="content-section">
+                <h2>Pengumuman</h2>
+                <ul>
+                    <li><a href="#">Pengumuman penting 1</a> - <span class="date">04 Mei 2025</span></li>
+                    <li><a href="#">Pengumuman penting 2</a> - <span class="date">03 Mei 2025</span></li>
+                    <li><a href="#">Pengumuman penting 3</a> - <span class="date">02 Mei 2025</span></li>
+                </ul>
+            </section>
 
-        <section class="cta">
-            <h2>Bergabung Bersama Kami</h2>
-            <p>Jadilah bagian dari masyarakat yang saling mendukung dan menjunjung tinggi nilai kekeluargaan.</p>
-            <a href="#kontak" class="btn">Hubungi Kami</a>
-        </section>
+            <section id="layanan" class="content-section">
+                <h2>Layanan Publik</h2>
+                <div class="grid-container service-grid">
+                    <div class="service-item">
+                        <img src="images/icon-ktp.png" alt="Layanan KTP">
+                        <p>Layanan KTP</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/icon-kk.png" alt="Layanan KK">
+                        <p>Layanan Kartu Keluarga</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/icon-izin.png" alt="Layanan Perizinan">
+                        <p>Layanan Perizinan</p>
+                    </div>
+                    <div class="service-item">
+                        <img src="images/icon-lain.png" alt="Layanan Lainnya">
+                        <p>Layanan Lainnya</p>
+                    </div>
+                </div>
+            </section>
 
-        <section class="info-aside">
-            <article>
-                <h2>Info Terkini</h2>
-                <p>Pembangunan balai warga dimulai minggu depan. Semua warga diharapkan ikut serta dalam gotong royong.
-                </p>
-            </article>
-            <aside>
-                <h2>Profil Singkat</h2>
-                <img src="profil.jpg" alt="Foto Kampung" />
-                <p>Kampung Longjaha dikenal dengan kebersamaan dan gotong royong yang kuat.</p>
-            </aside>
-        </section>
+        </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 Kampung Longjaha - Semua Hak Dilindungi</p>
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-column">
+                <h4>Kontak Kami</h4>
+                <p>Kantor Kecamatan Taktakan</p>
+                <p>Jl. Raya Taktakan No. 123, Serang, Banten</p>
+                <p>Telepon: (0254) xxx-xxxx</p>
+                <p>Email: info@taktakan.serangkota.go.id</p>
+            </div>
+            <div class="footer-column">
+                <h4>Tautan Terkait</h4>
+                <ul>
+                    <li><a href="#">Pemerintah Kota Serang</a></li>
+                    <li><a href="#">Disdukcapil Kota Serang</a></li>
+                    <li><a href="#">Layanan Pengaduan</a></li>
+                </ul>
+            </div>
+            <div class="footer-column">
+                <h4>Media Sosial</h4>
+                <a href="#">Facebook</a> | <a href="#">Twitter</a> | <a href="#">Instagram</a>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2025 Hak Cipta Milik Pribadi. Dibuat oleh <a href="https://github.com/nalim07">Warga</a>. </p>
+        </div>
     </footer>
 
     <script src="assets/js/script.js"></script>
