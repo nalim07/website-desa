@@ -11,8 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 
 <body>
@@ -21,17 +24,16 @@
             <div class="logo-area">
                 <div class="site-title">
                     <h1>OPCK</h1>
-                    <p>Kampung Sumur Gading, Serang.</p>
+                    <p>Kp. Sumur Gading</p>
                 </div>
             </div>
             <nav class="main-nav">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#" class="nav-link active">Beranda</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Profil</a></li>
+                    <!-- <li class="nav-item"><a href="#" class="nav-link active">Beranda</a></li> -->
+                    <li class="nav-item"><a href="#profile" class="nav-link">Profil</a></li>
                     <li class="nav-item"><a href="#layanan" class="nav-link">Layanan</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Berita</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Galeri</a></li>
-                    <li class="nav-item"><a href="#" class="nav-link">Kontak</a></li>
+                    <li class="nav-item"><a href="#berita" class="nav-link">Berita</a></li>
+                    <li class="nav-item"><a href="#kontak" class="nav-link">Kontak</a></li>
                 </ul>
             </nav>
             <button class="nav-toggle" aria-label="Toggle Navigation">
@@ -44,66 +46,189 @@
 
     <section class="hero">
         <div class="hero-container">
-            <h2 class="hero-title">Selamat Datang di Website Resmi Kp. Sumur Gading</h2>
-            <p class="hero-subtitle">Informasi terkini seputar kegiatan dan layanan di Kp. Sumur Gading.</p>
+            <h2 class="hero-title">Selamat Datang di Website Resmi <br>Kampung Sumur Gading</h2>
+            <p class="hero-subtitle">Informasi terkini seputar kegiatan dan layanan <br>di Kp. Sumur Gading, Kab.
+                Serang, Banten.</p>
         </div>
     </section>
 
     <main class="main-content">
         <div class="container">
-            <section id="berita" class="content-section">
-                <h2>Berita Terkini</h2>
-                <div class="grid-container">
-                    <article class="card">
-                        <img src="images/berita1-placeholder.jpg" alt="Judul Berita 1">
-                        <h3>Judul Berita Pertama</h3>
-                        <p>Ringkasan singkat berita pertama ada di sini...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
-                    </article>
-                    <article class="card">
-                        <img src="images/berita2-placeholder.jpg" alt="Judul Berita 2">
-                        <h3>Judul Berita Kedua</h3>
-                        <p>Ringkasan singkat berita kedua ada di sini...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
-                    </article>
-                    <article class="card">
-                        <img src="images/berita3-placeholder.jpg" alt="Judul Berita 3">
-                        <h3>Judul Berita Ketiga</h3>
-                        <p>Ringkasan singkat berita ketiga ada di sini...</p>
-                        <a href="#" class="read-more">Baca Selengkapnya</a>
-                    </article>
+            <!-- Section Profil -->
+            <section id="profile" class="content-section" data-aos="fade-up">
+                <h2>Profil Kp. Sumur Gading</h2>
+                <div class="profile-container">
+                    <div class="profile-image-wrapper" data-aos="fade-right">
+                        <img src="assets/images/taman-sg.png" alt="Profil Kp. Sumur Gading" class="profil-image">
+                    </div>
+                    <div class="profile-content" data-aos="fade-left">
+                        <p>Kampung Sumur Gading adalah salah satu kampung yang terletak di Kecamatan Bojonegara,
+                            Kabupaten
+                            Serang, Banten.
+                            Kampung ini dikenal dengan keindahan alamnya dan keragaman budayanya.</p>
+                        <p>Di kampung ini, masyarakatnya sangat menjunjung tinggi nilai-nilai gotong royong dan saling
+                            membantu dalam
+                            berbagai kegiatan. Kami memiliki tradisi tahunan yang menjadi daya tarik wisata budaya bagi
+                            pengunjung.</p>
+                    </div>
+                </div>
+                <!-- Informasi Seputar Kampung -->
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <h4><i class="fas fa-map-marker-alt"></i> Luas Wilayah</h4>
+                        <p>&plusmn;50 Hektar</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4><i class="fas fa-users"></i> Jumlah Penduduk</h4>
+                        <p>&plusmn;3.000 Jiwa</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4><i class="fas fa-route"></i> RW</h4>
+                        <p>05</p>
+                    </div>
+                    <div class="detail-item">
+                        <h4><i class="fas fa-home"></i> RT</h4>
+                        <p>9, 10, 11</p>
+                    </div>
                 </div>
             </section>
 
-            <section id="pengumuman" class="content-section">
-                <h2>Pengumuman</h2>
-                <ul>
-                    <li><a href="#">Pengumuman penting 1</a> - <span class="date">04 Mei 2025</span></li>
-                    <li><a href="#">Pengumuman penting 2</a> - <span class="date">03 Mei 2025</span></li>
-                    <li><a href="#">Pengumuman penting 3</a> - <span class="date">02 Mei 2025</span></li>
-                </ul>
-            </section>
-
-            <section id="layanan" class="content-section">
+            <!-- Section Layanan -->
+            <section id="layanan" class="content-section" data-aos="fade-up">
                 <h2>Layanan Publik</h2>
                 <div class="grid-container service-grid">
+                    <!-- Pendidikan -->
                     <div class="service-item">
-                        <img src="images/icon-ktp.png" alt="Layanan KTP">
-                        <p>Layanan KTP</p>
+                        <i class="fas fa-school service-icon"></i>
+                        <h3>Pendidikan</h3>
+                        <ul class="service-list">
+                            <li>PAUD & TK IT Edelweis</li>
+                            <li>MDA Al-Khairiyah Margagiri</li>
+                            <li>MTs.S Al-Khairiyah Margagiri</li>
+                        </ul>
                     </div>
+
+                    <!-- Kesehatan -->
                     <div class="service-item">
-                        <img src="images/icon-kk.png" alt="Layanan KK">
-                        <p>Layanan Kartu Keluarga</p>
+                        <i class="fas fa-hospital service-icon"></i>
+                        <h3>Kesehatan</h3>
+                        <ul class="service-list">
+                            <li>Klinik Bidan Sri Ernawati</li>
+                            <li>Klinik Rahima</li>
+                        </ul>
                     </div>
+
+                    <!-- Fasilitas Umum -->
                     <div class="service-item">
-                        <img src="images/icon-izin.png" alt="Layanan Perizinan">
-                        <p>Layanan Perizinan</p>
-                    </div>
-                    <div class="service-item">
-                        <img src="images/icon-lain.png" alt="Layanan Lainnya">
-                        <p>Layanan Lainnya</p>
+                        <i class="fas fa-mosque service-icon"></i>
+                        <h3>Fasilitas Umum</h3>
+                        <ul class="service-list">
+                            <li>Masjid Al-Fudhola</li>
+                            <li>Taman Amin OPCK</li>
+                        </ul>
                     </div>
                 </div>
+            </section>
+
+            <!-- Section Berita -->
+            <section id="berita" class="content-section" data-aos="fade-up">
+                <h2>Berita Terkini</h2>
+                <div class="berita-wrapper">
+                    <!-- Slider Berita Sebelah Kiri -->
+                    <div class="berita-slider">
+                        <div class="slider-container">
+                            <div class="slider-track">
+                                <article class="slider-item">
+                                    <img src="assets/images/sawah.jpg" alt="Berita 1">
+                                    <div class="slider-content">
+                                        <span class="berita-category">Pembangunan</span>
+                                        <h3>Peresmian Jembatan Baru Kampung Sumur Gading</h3>
+                                        <div class="meta-info">
+                                            <span class="date"><i class="fas fa-calendar-alt"></i> 20 Juli 2024</span>
+                                            <span class="author"><i class="fas fa-user"></i> Admin Desa</span>
+                                        </div>
+                                        <p>Pembangunan jembatan penghubung antar RT akhirnya selesai dan diresmikan...
+                                        </p>
+                                        <a href="#" class="read-more">Selengkapnya</a>
+                                    </div>
+                                </article>
+
+                                <article class="slider-item">
+                                    <img src="assets/images/taman-sg.png" alt="Berita 2">
+                                    <div class="slider-content">
+                                        <span class="berita-category">Kesehatan</span>
+                                        <h3>Posyandu Bulanan Agustus 2024</h3>
+                                        <div class="meta-info">
+                                            <span class="date"><i class="fas fa-calendar-alt"></i> 18 Juli 2024</span>
+                                            <span class="author"><i class="fas fa-user"></i> Bidang Kesehatan</span>
+                                        </div>
+                                        <p>Jadwal pelaksanaan posyandu bulan Agustus untuk balita dan lansia...</p>
+                                        <a href="#" class="read-more">Selengkapnya</a>
+                                    </div>
+                                </article>
+
+                            </div>
+                        </div>
+                        <div class="slider-controls">
+                            <button class="prev-slide"><i class="fas fa-chevron-left"></i></button>
+                            <div class="slider-dots"></div>
+                            <button class="next-slide"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Sidebar Kanan -->
+                    <aside class="berita-sidebar">
+                        <h3>Berita Terpopuler</h3>
+                        <div class="popular-posts">
+                            <article class="popular-item">
+                                <div class="post-number">1</div>
+                                <div class="post-content">
+                                    <h4>Penerimaan Bansos Tahap III 2024</h4>
+                                    <div class="post-meta">
+                                        <span class="views"><i class="fas fa-eye"></i> 1.2rb</span>
+                                        <span class="comments"><i class="fas fa-comment"></i> 45</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <article class="popular-item">
+                                <div class="post-number">2</div>
+                                <div class="post-content">
+                                    <h4>Pelatihan Pengolahan Sampah Mandiri</h4>
+                                    <div class="post-meta">
+                                        <span class="views"><i class="fas fa-eye"></i> 985</span>
+                                        <span class="comments"><i class="fas fa-comment"></i> 32</span>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- Tambahkan item populer lainnya -->
+                        </div>
+                    </aside>
+                </div>
+            </section>
+
+            <!-- Section Kontak -->
+            <section id="kontak" class="content-section" data-aos="fade-up">
+                <h2>Kontak</h2>
+                <p>Jika Anda memiliki pertanyaan atau ingin memberikan masukan, silakan hubungi kami melalui form di
+                    bawah
+                    ini:</p>
+                <form action="#" method="post" class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Nama:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Pesan:</label>
+                        <textarea id="message" name="message" required></textarea>
+                    </div>
+                    <button type="submit">Kirim</button>
+                </form>
             </section>
 
         </div>
