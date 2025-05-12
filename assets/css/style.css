@@ -599,17 +599,11 @@ header.solid {
     transition: all 0.3s ease;
 }
 
-.post-number {
-    width: 35px;
-    height: 35px;
-    background: #03A791;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-weight: bold;
-    flex-shrink: 0;
+.post-image {
+    width: 60px;
+    height: 60px;
+    margin-right: 12px;
+    object-fit: contain;
 }
 
 .post-content h4 {
