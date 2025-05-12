@@ -15,20 +15,56 @@ window.addEventListener("scroll", () => {
     scrollPosition = currentScrollPosition;
 });
 
+// JavaScript untuk Hamburger Menu
 const navToggle = document.querySelector('.nav-toggle');
-const navList = document.querySelector('.nav-list');
+const mobileNav = document.querySelector('.mobile-nav-wrapper');
+const navOverlay = document.createElement('div');
+navOverlay.className = 'nav-overlay';
 
-navToggle.addEventListener('click', () => {
-    navList.classList.toggle('show-nav');
+function toggleNav() {
     navToggle.classList.toggle('nav-active');
+    mobileNav.classList.toggle('active');
+    navOverlay.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
+}
+
+navToggle.addEventListener('click', toggleNav);
+navOverlay.addEventListener('click', toggleNav);
+document.body.appendChild(navOverlay);
+
+// Close menu saat klik link
+document.querySelectorAll('.mobile-nav-link').forEach(link => {
+    link.addEventListener('click', toggleNav);
 });
 
-document.addEventListener('click', (event) => {
-    if (!navList.contains(event.target) && !navToggle.contains(event.target)) {
-        navList.classList.remove('show-nav');
-        navToggle.classList.remove('nav-active');
-    }
-});
+function updateActiveNav() {
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+
+    // Cek posisi scroll
+    let current = '';
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= (sectionTop - sectionHeight / 3)) {
+            current = section.getAttribute('id');
+        }
+    });
+
+    // Update class aktif
+    navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href').includes(current)) {
+            link.classList.add('active');
+        }
+    });
+}
+
+// Event listener untuk scroll
+window.addEventListener('scroll', updateActiveNav);
+
+// Inisialisasi saat pertama load
+document.addEventListener('DOMContentLoaded', updateActiveNav);
 
 // Smooth scroll dan offset untuk fixed header
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -60,12 +96,12 @@ function initAOS() {
     }
 
     window.addEventListener('scroll', checkScroll);
-    checkScroll(); // Init check
+    checkScroll();
 }
 
 initAOS();
 
-// Slider Functionality
+// Slider
 const sliderTrack = document.querySelector('.slider-track');
 const slides = document.querySelectorAll('.slider-item');
 const dotsContainer = document.querySelector('.slider-dots');
@@ -91,18 +127,25 @@ function goToSlide(slideIndex) {
     });
 }
 
-document.querySelector('.next-slide').addEventListener('click', () => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    goToSlide(currentSlide);
+// Auto slide
+let autoSlideInterval;
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        currentSlide = (currentSlide + 1) % slides.length;
+        goToSlide(currentSlide);
+    }, 5000);
+}
+
+// Pause saat hover
+const sliderContainer = document.querySelector('.berita-slider');
+sliderContainer.addEventListener('mouseenter', () => {
+    clearInterval(autoSlideInterval);
 });
 
-document.querySelector('.prev-slide').addEventListener('click', () => {
-    currentSlide = (currentSlide - 1 + slides.length) % slides.length;
-    goToSlide(currentSlide);
+sliderContainer.addEventListener('mouseleave', () => {
+    startAutoSlide();
 });
 
-// Auto slide (optional)
-setInterval(() => {
-    currentSlide = (currentSlide + 1) % slides.length;
-    goToSlide(currentSlide);
-}, 5000);
+// Inisialisasi
+startAutoSlide();
