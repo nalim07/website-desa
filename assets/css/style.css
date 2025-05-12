@@ -112,7 +112,7 @@ header.solid {
     transform-origin: center;
 }
 
-/* Tombol Hamburger */
+/* Interaksi Hamburger */
 .nav-toggle.nav-active span:nth-child(1) {
     transform: translateY(8px) rotate(45deg);
 }
@@ -131,7 +131,7 @@ header.solid {
     top: 0;
     right: -100%;
     width: 85%;
-    max-width: 320px;
+    max-width: 220px;
     height: 100vh;
     background: #03A791;
     z-index: 1000;
@@ -197,7 +197,7 @@ header.solid {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     z-index: 999;
     display: none;
 }
@@ -463,7 +463,6 @@ header.solid {
 }
 
 /* Berita */
-
 .berita-wrapper {
     display: grid;
     grid-template-columns: 2fr 1fr;
@@ -731,7 +730,6 @@ header.solid {
 
 .footer-container {
     padding: 3rem 2rem 0 2rem;
-
 }
 
 .footer-grid {
@@ -841,14 +839,8 @@ header.solid {
 /* Copyright Styles */
 .copyright {
     background: #1f2226;
-    padding: 1.5rem 0;
+    padding: 1rem 0 1rem 0;
     text-align: center;
-}
-
-.copyright .container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
 }
 
 .copyright p {
@@ -866,46 +858,6 @@ header.solid {
     text-decoration: underline;
 }
 
-
-/* Responsive Mobile */
-@media (max-width: 425px) {
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
-
-    .hero-container {
-        padding: 0 10px;
-    }
-
-    .main-content {
-        padding: 1rem;
-    }
-
-    .profile-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .profile-image-wrapper {
-        width: 100%;
-        max-width: 300px;
-        margin: 0 auto;
-    }
-
-    .profile-details {
-        grid-template-columns: 1fr;
-        padding: 1rem;
-        gap: 1rem;
-    }
-
-    .detail-item {
-        padding: 1rem;
-    }
-}
 
 /* Responsive Tablet */
 @media (max-width: 768px) {
@@ -1040,4 +992,48 @@ header.solid {
         justify-content: center;
     }
 
+}
+
+/* Responsive Mobile */
+@media (max-width: 425px) {
+    .hero h2 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+        max-width: 70%;
+        margin: 0 auto;
+        line-height: 1.5;
+        text-align: center;
+    }
+
+    .hero-container {
+        padding: 0 10px;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-image-wrapper {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .profile-details {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .detail-item {
+        padding: 1rem;
+    }
 }
