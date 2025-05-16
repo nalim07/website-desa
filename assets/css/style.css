@@ -45,9 +45,7 @@ header.solid {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 6rem 0 6rem;
 }
 
 .site-title h1 {
@@ -104,12 +102,18 @@ header.solid {
 
 .nav-toggle span {
     display: block;
+    position: relative;
     height: 2px;
     width: 100%;
     background-color: #E9F5BE;
     margin: 6px 0;
+    z-index: 10000;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transform-origin: center;
+    -webkit-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -moz-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -ms-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -o-transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 /* Interaksi Hamburger */
@@ -134,7 +138,7 @@ header.solid {
     max-width: 220px;
     height: 100vh;
     background: #03A791;
-    z-index: 1000;
+    z-index: 999;
     transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: -2px 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -198,7 +202,7 @@ header.solid {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
+    z-index: 99;
     display: none;
 }
 
@@ -206,8 +210,12 @@ header.solid {
     display: block;
 }
 
-/* ===== Hamburger Menu ==== */
+/* ===== End Header ===== */
 
+
+/*===== Main Content =====*/
+
+/* Hero Section */
 .hero {
     /* note: gambar sawah ini diambil dari google */
     background: url('../images/sawah.webp') no-repeat center center/cover;
@@ -243,33 +251,6 @@ header.solid {
     margin-bottom: 2rem;
 }
 
-.cta-button {
-    background-color: #007bff;
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    text-decoration: none;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-}
-
-.main-content {
-    padding: 1rem 3rem;
-    text-align: left;
-}
-
-.main-content p {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 .hero h2 {
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -279,10 +260,11 @@ header.solid {
     font-size: 1.2rem;
 }
 
+/* Container */
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 1rem 3rem;
 }
 
 .content-section {
@@ -485,6 +467,7 @@ header.solid {
 
 .slider-container {
     position: relative;
+    height: 100%;
 }
 
 .slider-track {
@@ -642,7 +625,6 @@ header.solid {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
-    margin-top: 2rem;
 }
 
 .contact-info-wrapper {
@@ -665,6 +647,10 @@ header.solid {
 }
 
 /* Form Styling */
+.contact-form-wrapper {
+    width: 100%;
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }
@@ -682,11 +668,16 @@ header.solid {
 .form-group input,
 .form-group textarea {
     width: 100%;
-    padding: 12px;
+    box-sizing: border-box;
+    padding: 12px 0 12px 12px;
     border: 2px solid #e9ecef;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
 }
 
 .form-group input:focus,
@@ -714,9 +705,13 @@ header.solid {
 
 .submit-btn:hover {
     background: #028571;
+    width: 100%;
 }
 
-/* Footer */
+/*===== End Main Content =====*/
+
+
+/*===== Footer =====*/
 .footer {
     background: #2a2e35;
     color: #ffffff;
@@ -852,13 +847,33 @@ header.solid {
     text-decoration: underline;
 }
 
+/* ===== End Footer ===== */
+
+/* Responsive Laptop 1024px */
+@media (max-width: 1024px) {
+    .header-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 0 5rem 0 5rem;
+    }
+
+    .berita-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .slider-container {
+        height: 100%;
+    }
+
+}
 
 /* Responsive Tablet */
 @media (max-width: 768px) {
     .header-container {
-        flex-direction: row;
+        display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: center;
+        padding: 0 3rem 0 3rem;
     }
 
     .main-nav {
@@ -968,10 +983,6 @@ header.solid {
         height: 250px;
     }
 
-    .contact-form-wrapper {
-        padding: 1.5rem;
-    }
-
     /* Footer */
     .footer-grid {
         grid-template-columns: 1fr;
@@ -1004,10 +1015,6 @@ header.solid {
 
     .hero-container {
         padding: 0 10px;
-    }
-
-    .main-content {
-        padding: 1rem;
     }
 
     .profile-container {
